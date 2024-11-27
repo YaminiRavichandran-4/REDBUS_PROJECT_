@@ -1,0 +1,21 @@
+Route_Name,Route_Link,Bus_Name,Bus_Type,Departing_Time,Duration,Reaching_Time,Star_Rating,Price,Seat_Availability
+Delhi to Srinagar,https://www.redbus.in/bus-tickets/delhi-to-srinagar,Zingbus Plus,A/C Sleeper (2+1),21:35,19h 30m,17:05,4.7,2093,15 Seats available
+Delhi to Srinagar,https://www.redbus.in/bus-tickets/delhi-to-srinagar,Zingbus Plus,Bharat Benz A/C Seater /Sleeper (2+1),20:00,19h 20m,15:20,3.9,2324,12 Seats available
+Jammu (j and k) to Katra (jammu and kashmir),https://www.redbus.in/bus-tickets/jammu-to-katra,Bhawani Travels,A/C Seater / Sleeper (2+2),19:50,01h 40m,21:30,3.8,400,39 Seats available
+Jammu (j and k) to Katra (jammu and kashmir),https://www.redbus.in/bus-tickets/jammu-to-katra,Bhawani Travels,A/C Seater / Sleeper (2+2),20:00,01h 45m,21:45,3.8,450,24 Seats available
+Jammu (j and k) to Katra (jammu and kashmir),https://www.redbus.in/bus-tickets/jammu-to-katra,Namdev Travels,NON A/C Seater (2+2),16:00,02h 00m,18:00,0,INR 100,34 Seats available
+Jammu (j and k) to Katra (jammu and kashmir),https://www.redbus.in/bus-tickets/jammu-to-katra,PK VAID TRAVELS,NON A/C Seater (2+3),17:00,01h 30m,18:30,0,INR 150,36 Seats available
+Katra (jammu and kashmir) to Jammu (j and k),https://www.redbus.in/bus-tickets/katra-to-jammu,Shiv Mohan Travels,AC Sleeper (2+1),17:00,01h 30m,18:30,3.1,INR 619.05,36 Seats available
+Katra (jammu and kashmir) to Jammu (j and k),https://www.redbus.in/bus-tickets/katra-to-jammu,Zingbus Plus,Bharat Benz A/C Seater /Sleeper (2+1),18:45,01h 25m,20:10,4.5,INR 103,39 Seats available
+Katra (jammu and kashmir) to Jammu (j and k),https://www.redbus.in/bus-tickets/katra-to-jammu,City Land Travels,A/C Seater/Sleeper (2+1),19:00,01h 30m,20:30,3.5,647,33 Seats available
+Katra (jammu and kashmir) to Jammu (j and k),https://www.redbus.in/bus-tickets/katra-to-jammu,KN Nehra Travels,A/C Seater / Sleeper (2+1),19:00,01h 30m,20:30,3.0,INR 599,30 Seats available
+Katra (jammu and kashmir) to Jammu (j and k),https://www.redbus.in/bus-tickets/katra-to-jammu,Zingbus Plus,A/C Sleeper (2+1),19:50,01h 30m,21:20,4.5,INR 123,36 Seats available
+Katra (jammu and kashmir) to Jammu (j and k),https://www.redbus.in/bus-tickets/katra-to-jammu,FlixBus,Bharat Benz A/C Sleeper (2+1),21:00,01h 25m,22:25,4.1,INR 88.39,19 Seats available
+Katra (jammu and kashmir) to Jammu (j and k),https://www.redbus.in/bus-tickets/katra-to-jammu,PK VAID TRAVELS,NON A/C Seater (2+3),17:00,01h 30m,18:30,2.1,INR 150,36 Seats available
+Katra (jammu and kashmir) to Jammu (j and k),https://www.redbus.in/bus-tickets/katra-to-jammu,Namdev Travels,NON A/C Seater (2+2),18:30,02h 00m,20:30,3.5,INR 100,34 Seats available
+Katra (jammu and kashmir) to Jammu (j and k),https://www.redbus.in/bus-tickets/katra-to-jammu,PK VAID TRAVELS,NON A/C Seater (2+3),19:00,01h 30m,20:30,3.9,INR 150,36 Seats available
+Katra (jammu and kashmir) to Jammu (j and k),https://www.redbus.in/bus-tickets/katra-to-jammu,Royal Golden,A/C Seater / Sleeper (2+2),23:00,01h 00m,00:00,3.7,495,32 Seats available
+Katra (jammu and kashmir) to Jammu (j and k),https://www.redbus.in/bus-tickets/katra-to-jammu,Vijay Tour and Travels,AC Sleeper (2+1),15:50,02h 40m,18:30,3.7,1035,34 Seats available
+Katra (jammu and kashmir) to Jammu (j and k),https://www.redbus.in/bus-tickets/katra-to-jammu,VGO BUS,A/C Seater/Sleeper (2+1),18:30,01h 00m,19:30,0,INR 1800,40 Seats available
+Katra (jammu and kashmir) to Jammu (j and k),https://www.redbus.in/bus-tickets/katra-to-jammu,SHRI KRISHNA TRAVELS (JAI SHREE GANESH YATRA CO.),VE A/C Seater / Sleeper (2+1),19:00,01h 00m,20:00,0,INR 1099,38 Seats available
+Katra (jammu and kashmir) to Jammu (j and k),https://www.redbus.in/bus-tickets/katra-to-jammu,SHRI KRISHNA TRAVELS (JAI SHREE GANESH YATRA CO.),A/C Sleeper (2+2),20:00,01h 00m,21:00,0,INR 1099,48 Seats available
