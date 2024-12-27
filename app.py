@@ -8,20 +8,29 @@ def get_connection():
 
 # Function to fetch route names starting with a specific letter, arranged alphabetically
 def fetch_route_names(connection, starting_letter):
-    query = f"SELECT DISTINCT Route_Name FROM bus_routes WHERE Route_Name LIKE '{starting_letter}%' ORDER BY Route_Name"
-    route_names = pd.read_sql(query, connection)['Route_Name'].tolist()
+    query = "SELECT DISTINCT Route_Name FROM bus_routes WHERE Route_Name LIKE %s ORDER BY Route_Name"
+    route_names = pd.read_sql_query(query, connection, params=(starting_letter.upper() + '%',))['Route_Name'].tolist()
     return route_names
 
 # Function to fetch data from MySQL based on selected Route_Name and price sort order
 def fetch_data(connection, route_name, price_sort_order):
     price_sort_order_sql = "ASC" if price_sort_order == "Low to High" else "DESC"
-    query = f"SELECT * FROM bus_routes WHERE Route_Name = %s ORDER BY Star_Rating DESC, Price {price_sort_order_sql}"
-    df = pd.read_sql(query, connection, params=(route_name))
+    query = f"""
+        SELECT * FROM bus_routes 
+        WHERE Route_Name = %s 
+        ORDER BY Star_Rating DESC, Price {price_sort_order_sql}
+    """
+    df = pd.read_sql_query(query, connection, params=(route_name,))
     return df
 
-# Function to filter data based on Star_Rating and Bus_Type
-def filter_data(df, star_ratings, bus_types):
-    filtered_df = df[df['Star_Rating'].isin(star_ratings) & df['Bus_Type'].isin(bus_types)]
+# Function to filter data based on Star_Rating, Bus_Type, and Price
+def filter_data(df, star_ratings, bus_types, price_range):
+    filtered_df = df[
+        (df['Star_Rating'].isin(star_ratings)) &
+        (df['Bus_Type'].isin(bus_types)) &
+        (df['Price'] >= price_range[0]) & 
+        (df['Price'] <= price_range[1])
+    ]
     return filtered_df
 
 # Main Streamlit app
@@ -56,15 +65,23 @@ def main():
 
                         # Filter by Star_Rating and Bus_Type
                         star_ratings = data['Star_Rating'].unique().tolist()
-                        selected_ratings = st.multiselect('Filter by Star Rating', star_ratings)
+                        selected_ratings = st.multiselect('Filter by Star Rating', star_ratings, default=star_ratings)
 
                         bus_types = data['Bus_Type'].unique().tolist()
-                        selected_bus_types = st.multiselect('Filter by Bus Type', bus_types)
+                        selected_bus_types = st.multiselect('Filter by Bus Type', bus_types, default=bus_types)
 
+                        # Sidebar - Slider for price range
+                        min_price, max_price = int(data['Price'].min()), int(data['Price'].max())
+                        price_range = st.sidebar.slider(
+                            'Filter by Price Range',
+                            min_price, max_price, (min_price, max_price)
+                        )
+
+                        # Apply filters
                         if selected_ratings and selected_bus_types:
-                            filtered_data = filter_data(data, selected_ratings, selected_bus_types)
+                            filtered_data = filter_data(data, selected_ratings, selected_bus_types, price_range)
                             # Display filtered data table with a subheader
-                            st.write(f"### Filtered Data for Star Rating: {selected_ratings} and Bus Type: {selected_bus_types}")
+                            st.write(f"### Filtered Data for Star Rating: {selected_ratings}, Bus Type: {selected_bus_types}, and Price Range: {price_range}")
                             st.write(filtered_data)
                     else:
                         st.write(f"No data found for Route: {selected_route} with the specified price sort order.")
